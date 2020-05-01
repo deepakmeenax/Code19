@@ -27,7 +27,6 @@ request(options, function (error, response, body) {
     
     data=JSON.parse(body);
     callback(undefined,data);
-    
 
 });
 }

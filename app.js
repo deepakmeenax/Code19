@@ -16,9 +16,17 @@ var options = {
       'x-rapidapi-key':process.env.API_KEY
     },
     proxy:process.env.PROXY || null
-  };
+};
 
  
+var indiaurl = {
+  method: 'GET',
+  url: 'https://api.covid19india.org/data.json',
+  proxy:process.env.PROXY || null
+};
+
+
+
 const covidCall = (callback) =>{
 request(options, function (error, response, body) {
     if (error) {
@@ -40,6 +48,33 @@ app.get('/covidata',(req,res)=>{
 
     })
 })
+
+
+
+const indiaCall = (callback) =>{
+  request(indiaurl, function (error, response, body) {
+      if (error) {
+        return callback('error',undefined)
+      }
+
+      data=JSON.parse(body);
+      callback(undefined,data);
+  
+  });
+  }
+  app.get('/indiadata',(req,res)=>{
+      indiaCall(callback = (error,data)=>{
+        if(error)
+        {
+          return res.send(error)
+        }
+        res.send(data)
+  
+      })
+  })
+
+
+
 
 app.listen(port,()=>{
     console.log('server is started on port',port);

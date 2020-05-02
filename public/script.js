@@ -22,11 +22,10 @@ function myFunction() {
 
 
 
-
 function fun(){
     fetch('/covidata').then((response)=>{
         response.json().then((data)=>{
-            
+        
           
         var myTable=document.getElementById("myTable");
 
@@ -59,5 +58,45 @@ function fun(){
         })
     })
     
+
+};
+
+
+function joke(){
+  fetch('/indiadata').then((response)=>{
+      response.json().then((data)=>{
+      
+        
+      var myTable=document.getElementById("meTable");
+
+      for(var i=1;i<=226;i++)
+      {
+        var x=myTable.insertRow(i);
+        
+        x.insertCell(0);
+        myTable.rows[i].cells[0].innerHTML=data.statewise[i].state;
+        
+        x.insertCell(1);
+        myTable.rows[i].cells[1].innerHTML=data.statewise[i].confirmed;
+  
+        x.insertCell(2);
+        myTable.rows[i].cells[2].innerHTML=data.statewise[i].recovered;
+        
+        x.insertCell(3);
+        myTable.rows[i].cells[3].innerHTML=data.statewise[i].active;
+      
+        x.insertCell(4);
+        myTable.rows[i].cells[4].innerHTML=data.statewise[i].deaths;
+        
+        x.insertCell(5);
+        myTable.rows[i].cells[5].innerHTML= 0 | data.statewise[i].deltaconfirmed;
+  
+      }
+
+
+
+      })
+  })
+  
 
 }

@@ -1,3 +1,75 @@
+.logo {
+    text-align: center;
+    background-color:#39BC96;
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+}
+
+
+
+.header{
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    /*position: fixed;**/
+    top: 0;
+}
+  
+.header ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    height: 30px;
+    align-items: center;
+    padding: 0;
+}
+  
+.header ul li a{
+    text-align: center;
+    display: block;
+    color:#39BC96;
+    text-decoration: none;
+    font-family: Arial;
+}
+ 
+a:hover{
+    border-bottom:2px solid #39BC96;
+}
+
+
+/**middle*/
+
+
+.message{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding:50px 0 30px 0;
+}
+.message .mflex{
+    width: 40%;
+}
+.mflex img{
+    width: 100%;
+}
+
+.message .mflex p{
+    word-spacing: 3px;
+    text-align: justify;
+    text-decoration: none;
+    font-family: Arial;
+    color: #1b1b1dcc;
+    font-size: 20px;
+}
+.message .hide{
+    display: none;
+}
+
+/**table*/
+
 #myInput {
     background-image: url('icon.png'); 
     background-position: 10px 12px; 
@@ -10,12 +82,13 @@
 
 
 table {
+    display: table;
     border-collapse: collapse;
     width: 100%;
 }
   
 table,td {
-      border-bottom: 1px solid #ddd
+    border-bottom: 1px solid #ddd;
 }
   
 td {
@@ -25,11 +98,40 @@ td {
 }
   
 th {
-    background-color: #4CAF50;
+    background-color: #39BC96;
     color: white;
     text-align: center;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 1.3vw;
 }
  
 
 tr:nth-child(odd) {background-color: #f0e9e9;}
   
+@media only screen and (max-width: 700px) {
+    .message .mflex{
+      width: 100%;
+      height: auto;
+    }
+    table th{
+        font-size:3vw;
+    }
+    .message .mflex p{
+        display: none;
+        font-size: 15px;
+        padding: 0 8px ;
+    }
+    .header ul li a{
+        font-size:2.5vw;
+    }
+    .message .hide{
+        display: inline-block;
+        word-spacing: 2px;
+        text-align: justify;
+        text-decoration: none;
+        font-family: Arial;
+        color: #1b1b1dcc;
+        font-size: 15px;
+    }
+}

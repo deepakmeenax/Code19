@@ -145,6 +145,9 @@ tr:nth-child(odd) {background-color: #f0e9e9;}
         font-size: 10px;
         text-align: justify;
     }
+    .footer .links h2{
+        font-size: 15px;
+    }
 }
 
 

@@ -26,6 +26,13 @@ var indiaurl = {
 };
 
 
+var rajasthanurl = {
+  method: 'GET',
+  url: 'https://api.covid19india.org/v2/state_district_wise.json',
+  proxy:process.env.PROXY || null
+};
+
+
 
 const covidCall = (callback) =>{
 request(options, function (error, response, body) {
@@ -71,7 +78,32 @@ const indiaCall = (callback) =>{
         res.send(data)
   
       })
-  })
+})
+
+
+
+const rajasthanCall = (callback) =>{
+  request(rajasthanurl, function (error, response, body) {
+      if (error) {
+        return callback('error',undefined)
+      }
+
+      data=JSON.parse(body);
+      callback(undefined,data);
+  
+  });
+  }
+  app.get('/rajasthandata',(req,res)=>{
+      rajasthanCall(callback = (error,data)=>{
+        if(error)
+        {
+          return res.send(error)
+        }
+        res.send(data)
+  
+      })
+})
+
 
 
 

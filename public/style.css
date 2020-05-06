@@ -1,11 +1,18 @@
 .logo {
     text-align: center;
-    background-color:#39BC96;
-    color: white;
+    color: #39bc96;
+    font-size: 30px;
     text-decoration: none;
     font-family: Arial;
+    padding: 0;
+    margin: 0;
 }
-
+.logo h2{
+    margin: 0;
+}
+.logo span{
+    color: rgb(168, 54, 54);
+}
 
 
 .header{
@@ -36,6 +43,7 @@
 a:hover{
     border-bottom:2px solid #39BC96;
 }
+
 
 
 /**middle*/
@@ -76,10 +84,9 @@ a:hover{
     background-repeat: no-repeat; 
     font-size: 16px; 
     padding: 12px 20px 12px 40px; 
-    border: 0;  
+    border: 0; 
+    outline: none;
 }  
-
-
 
 table {
     border-collapse: collapse;
@@ -126,7 +133,9 @@ tr:nth-child(odd) {background-color: #f0e9e9;}
         display: none;
     }
     .header ul li a{
-        font-size:2.5vw;
+        margin: 0 8px;
+        font-size:15px;
+        word-wrap: break-word;
     }
     .message .hide{
         display: inline-block;
@@ -138,12 +147,14 @@ tr:nth-child(odd) {background-color: #f0e9e9;}
         font-size: 15px;
     }
     .safty h2{
-        font-size: 15px;
+        font-size: 5px;
         text-align: justify;
+        word-wrap: break-word;
     }
     .safty p{
-        font-size: 10px;
+        font-size: 5px;
         text-align: justify;
+        word-wrap: break-word;
     }
     .footer .links h2{
         font-size: 15px;
@@ -159,7 +170,7 @@ tr:nth-child(odd) {background-color: #f0e9e9;}
 .safty h2{
     font-size: 25px;
     text-align: start;
-    color: lawngreen;
+    color: #30c780;
 }
 
 .safty p{
@@ -173,27 +184,30 @@ tr:nth-child(odd) {background-color: #f0e9e9;}
     background-color: #333333;
     display: flex;
     justify-content: center;
+    margin: 0;
 }
   
 .footer .links h2{
     margin-top: 20px;
     display: block;
-      color:  #ffffff;
+    color:  #ffffff;
   
 }
    
 .footer .links a{
     margin: 10px;
-      text-decoration: none;
-      color:  inherit;
+    text-decoration: none;
+    color:  inherit;
 }
   
+.footer .links{
+    text-align: center;
+}
    
 .footer .links p{
+      margin-top: 10px;
       color:  #8f9296;
       font-size: 14px;
       font-weight: normal;
-    margin: 20px;
-    margin-left: 60px;
 }
   

@@ -153,24 +153,24 @@ function funny(){
         
       var myTable=document.getElementById("youTable");
 
-      for(var i=1;i<=36;i++)
+      for(var i=1;i<=65;i++)
       {
         var x=myTable.insertRow(i);
         
         x.insertCell(0);
-        myTable.rows[i].cells[0].innerHTML=data[4].districtData[i+2].district;
+        myTable.rows[i].cells[0].innerHTML=data[30].districtData[i+2].district;
         
         x.insertCell(1);
-        myTable.rows[i].cells[1].innerHTML=data[4].districtData[i+2].confirmed;
+        myTable.rows[i].cells[1].innerHTML=data[30].districtData[i+2].confirmed;
   
         x.insertCell(2);
-        myTable.rows[i].cells[2].innerHTML=data[4].districtData[i+2].recovered;
+        myTable.rows[i].cells[2].innerHTML=data[30].districtData[i+2].recovered;
         
         x.insertCell(3);
-        myTable.rows[i].cells[3].innerHTML=data[4].districtData[i+2].active;
+        myTable.rows[i].cells[3].innerHTML=data[30].districtData[i+2].active;
       
         x.insertCell(4);
-        myTable.rows[i].cells[4].innerHTML=data[4].districtData[i+2].deceased;
+        myTable.rows[i].cells[4].innerHTML=data[30].districtData[i+2].deceased;
         
       }
 

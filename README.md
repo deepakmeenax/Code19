@@ -3,7 +3,7 @@
  <p>responsive website</p>
 <table>
   <tr>
-      <td> <h1>screenshot in pc </h1></td>
+      <td> <h1>screenshot</h1></td>
   </tr>
    <tr>
       <td><img src="public/img/captured.png" height = "480" width="970"></td>
